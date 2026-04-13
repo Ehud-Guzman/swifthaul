@@ -4,14 +4,14 @@ import { motion } from 'framer-motion'
 import { ArrowRight, ChevronDown } from 'lucide-react'
 
 const Hero = () => (
-  <section
-    className="relative min-h-screen flex items-center justify-center overflow-hidden"
-    style={{
-      backgroundImage: "url('images/hero-truck (1).jpg')",
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-    }}
-  >
+  <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    {/* Background image — top-focused on mobile, centered on desktop */}
+    <img
+      src="/images/hero-truck (1).jpg"
+      alt=""
+      aria-hidden="true"
+      className="absolute inset-0 w-full h-full object-cover object-[center_20%] sm:object-center"
+    />
     {/* Dark gradient overlay */}
     <div className="absolute inset-0 bg-gradient-to-br from-[#0A1628]/92 via-[#0A1628]/78 to-[#1565C0]/55" />
 
